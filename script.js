@@ -14,19 +14,22 @@ function conteggio() {
     } else if (fasciaEta === "Over 65") {
         sconto = 0.40;
     }
-
+    const nomeViaggiatore = document.getElementById("nome").value;
     const prezzoFinale = prezzo * (1 - sconto);
 
     console.log(prezzoFinale);
 
     const container = document.querySelector(".messaggio");
-    container.textContent = `Il prezzo del tuo biglietto è: ${prezzoFinale.toFixed(2)} €`;
+    container.textContent = `Riepilogo biglietto
+Viaggiatore: ${nomeViaggiatore}
+Prezzo base: ${prezzo.toFixed(2)} €
+Tariffa applicata: ${fasciaEta}
+Prezzo finale: ${prezzoFinale.toFixed(2)} €`;
 }
-
 
 const formBiglietto = document.getElementById("formbiglietto");
 formBiglietto.addEventListener("submit", function (event) {
     event.preventDefault();
-
-    // Qui gestiremo il calcolo del biglietto
+    conteggio();
 });
+
