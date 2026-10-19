@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,6 +24,25 @@
         <option value="Adulto">Adulto</option>
         <option value="Over 65">Over 65</option>
     </select>
+    <!--form-->
+    <form id="formbiglietto">
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="numerokm">Numero di km da percorrere:</label>
+        <input type="number" id="numerokm" name="numerokm" min="1" required>
+
+        <select id="eta" required>
+            <option value="">Scegli una fascia d'età</option>
+            <option value="Minorenne">Minorenne</option>
+            <option value="Adulto">Adulto</option>
+            <option value="Over 65">Over 65</option>
+        </select>
+
+        <button type="submit">Invia</button>
+
+    </form>
 
 
     <script src="./script.js"></script>
