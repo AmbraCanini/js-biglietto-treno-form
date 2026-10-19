@@ -1,1 +1,31 @@
-js-biglietto-treno-form
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Benvenuto Utente</h1>
+
+    <!-- input numero di km da percorrere -->
+    <input type="number" id="numerokm">
+    <button onclick="conteggio()">Numero di Km</button>
+
+    <!-- Container per mostrare il risultato -->
+    <div class="messaggio"></div>
+
+    <!-- Selettore fascia d'età -->
+    <select id="eta">
+        <option value="Minorenne">Minorenne</option>
+        <option value="Adulto">Adulto</option>
+        <option value="Over 65">Over 65</option>
+    </select>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
