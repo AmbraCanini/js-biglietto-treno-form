@@ -20,7 +20,7 @@ function conteggio() {
     console.log(prezzoFinale);
 
     const container = document.querySelector(".messaggio");
-    container.textContent = `Riepilogo biglietto
+    container.textContent = `Riepilogo biglietto:
 Viaggiatore: ${nomeViaggiatore}
 Prezzo base: ${prezzo.toFixed(2)} €
 Tariffa applicata: ${fasciaEta}
