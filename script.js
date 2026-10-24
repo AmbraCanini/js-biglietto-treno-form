@@ -1,3 +1,10 @@
+
+const formBiglietto = document.getElementById("formbiglietto");
+formBiglietto.addEventListener("submit", function (event) {
+    event.preventDefault();
+    conteggio();
+});
+
 function conteggio() {
     const campoInput = document.getElementById("numerokm");
     const chilometraggio = Number(campoInput.value)
@@ -14,6 +21,8 @@ function conteggio() {
     } else if (fasciaEta === "Over 65") {
         sconto = 0.40;
     }
+
+
     const nomeViaggiatore = document.getElementById("nome").value;
     const prezzoFinale = prezzo * (1 - sconto);
 
@@ -27,9 +36,5 @@ Tariffa applicata: ${fasciaEta}
 Prezzo finale: ${prezzoFinale.toFixed(2)} €`;
 }
 
-const formBiglietto = document.getElementById("formbiglietto");
-formBiglietto.addEventListener("submit", function (event) {
-    event.preventDefault();
-    conteggio();
-});
+
 
